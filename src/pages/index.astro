@@ -1,0 +1,50 @@
+---
+import Layout from "../layouts/Layout.astro"
+import Cards from "../components/Cards.astro"
+import Header from "../components/Header.astro";
+---
+
+<Layout title="Index">
+	<div>
+		<Header />
+		<ul class="card-list">
+			<Cards 
+				href="https://www.typescriptlang.org"
+				alt="TypeScript Link"
+				name="TypeScript"
+				src="../../public/imgs/ts-logo.webp"
+			/>
+
+			<Cards
+				href="https://docs.astro.build/pt-br/getting-started/"
+				alt="Astro Link"
+				name="Astro"
+				src="../../public/imgs/astru.webp"
+			/>
+
+			<Cards
+			href="https://nodejs.org/en"
+			alt="Node Link"
+			name="Node Js"
+			src="../../public/imgs/node.png"
+			/>
+
+
+		</ul>
+	</div>
+</Layout>
+
+<style>
+	div{
+		display: flex;
+		flex-direction: column;
+	}
+	.card-list{
+		list-style: none;
+		display: flex;
+		justify-content: space-around;
+		align-items: center;
+		flex-wrap: wrap;
+		gap: 10px;
+	}
+</style>

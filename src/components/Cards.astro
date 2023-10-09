@@ -1,0 +1,67 @@
+---
+interface Props {
+    href: string
+    alt: string
+    name: string
+    src: string    
+}
+
+const { href , alt, name, src} = Astro.props
+
+---
+
+<li>
+    <div class="align">
+        <img src={ src } alt={ alt }>
+        <div>
+            <h1>{ name }</h1>
+            <a href={ href }> { name }</a>
+        </div>
+    </div>
+</li>
+
+<style>
+
+    img{
+        height: 125px;
+        width: 125px;
+        
+    }
+
+    li{
+        background: linear-gradient(rgb(23, 23, 68), navy );
+        width: 250px;
+        padding: 20px 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 10px;
+        -webkit-box-shadow: 2px 6px 13px -1px rgba(255,255,255,1);
+        -moz-box-shadow: 2px 6px 13px -1px rgba(255,255,255,1);
+        box-shadow: 2px 6px 13px -1px rgba(255,255,255,1);
+        transition: 0.5s;
+    }
+
+    li:hover{
+        transform: translateY(-5px);
+    }
+
+    a{
+        color: #5c5c5c;
+        text-decoration: none;
+        transition: 0.5s;
+        border: none;
+    }
+
+    a:hover{
+        border-bottom: 1px solid #fff;
+        color: #fff;
+
+    }   
+
+    h1{
+        text-shadow: 0px 0px 4px rgba(255,255,255,0.6);
+    }
+
+
+</style>
